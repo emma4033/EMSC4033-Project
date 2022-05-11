@@ -4,16 +4,27 @@
 
 ## Executive summary
 
-Create a general notebook were users can input there own data for a region (i.e. latitude and longitude) to produce a map showing the additional data - could be temperature, vegetation type, latitude etc.
-- use maps to overlay mutliple climate drivers and breakdown the complexity of interactions between climate drivers. For example, sea-surface temperature averages with season
+Allow the user to create maps focused on coastlines and ocean topography with coral sample locations specified and displayed with climate data from the coral samples. For example, the data from laser ablation analysis of coral core samples from Gladstone Harbour (past research I have done), or SST and radiocarbon analysis from coral core samples from Montebello Island (my current research).
+- overlay the data collected from coral analysis with a map of the temporal and spatial changes in the region specific to what was being analysed.
+
+- visualisation: combines climate research and climate data applications, branching the gap between proxy data attribution and the scientific process.
+
 
 **Example:** _(this is based on the seismic monitoring dashboard that Louis showed). Seismic stations can be used to monitor human noise over the course of the day. Some seismometers stream data live to a server and so this processing can be done in near-real time. In this project I plan to build an online dashboard which processes the data once a day and uploads the results to github as 1) raw data, 2) an image that can be embedded in websites, 3) an updating csv table in github. I also plan to use the github "actions" engine to provide all the necessary processing power._
 
 ## Goals
 
-- Goal 1
-- Goal 2
-- ...
+- how to upload user data in a readable format - preparing the data for analysis
+- how to create the graphs
+- how to create the maps - identify the location and put down markers for the coral locations
+- display this data in a visually appealing and easily digestable manner
+- with the maps - need to balance interactive and static
+- analysis of tools to use: Pandas, LAtools, Cartopy, 
+- ingenuity in the design - what helped (i.e. course resources), what was troubleshooted, what was added to others packages e.t.c
+
+Using Panda for easier data manipulation
+- get in a form pandas can read - i.e. file shape/format
+- testing - i.e. missing data from users: make error, leave it, plot it
 
 (Write things that you can assess whether they have been accomplished. For example, a goal like “improve visualisation of ocean output” is vague... But a goal that reads “implement functionality to plot streamlines of horizontal velocities in various slices from 3D ocean output” is specific enough.)
 
