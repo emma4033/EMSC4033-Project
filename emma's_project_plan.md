@@ -37,14 +37,19 @@ _Give more details on the scientific problem that you are working on and how thi
 
 _What do you have at your disposal already that will help the project along. Did you convince somebody else to help you ? Are there already some packages you can build upon. What makes it possible to do this project in the time available. Do you intend to continue this project in the future ?_
 
-(For example:
-  - I’ll be using data of X from satellite and then also data from baby blue seals…
-  - I’ll step on existing package Y and build extra functionality on top of class W.
-  - I’ll use textbook Z that describes algorithms a, b, c
-  - …
-)
+# maps with coral locations 
+- maps created through cartopy
+
+# coral data processing to produce accompaning time-series graphs:
+- laser ablation data (trace metal analysis) can be processed through LAtools 
+- SST data can be processed through xarray, cartopy, matplotlib
+- radiocarbon data can be processed through 
 
 ## Testing, validation, documentation
+
+- testing is vital -  notebook may run now, but with so many components coming together something will stop working with time, so you need to figure out how that will be addressed in the future.
+- hide duplications (things users can break) - makes it harder to use but easier to read
+- docstrings for how the user should upload the files
 
 **Note:** You need to think about how you will know your code is correct and achieves the goals that are set out above (specific tests that can be implemented automatically using, for example, the `assert` statement in python.)  It can be really helpful if those tests are also part of the documentation so that when you tell people how to do something with the code, the example you give is specifically targetted by some test code.
 
