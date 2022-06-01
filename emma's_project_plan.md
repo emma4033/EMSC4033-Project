@@ -30,22 +30,27 @@ Using Panda for easier data manipulation
 
 ## Background and Innovation  
 
-_Give more details on the scientific problem that you are working on and how this project will advance the discipline or help with your own research.
-(Where applicable, describe how people have been achieving this goal up to now, talk about existing packages, their limitations, whether you can generalise something to help other people use your code)._
+Climate science and environmental studies rely on the analysis of data collected from records, including corals, ice cores, tree rings, and sediment samples. These physical samples can be used as proxies for environmental conditions, such as sea-surface temperatures, precipitation, and atmospheric carbon dioxide levels, going backwards in time. The proxy records provide this link to the more conceptual ideas of changing climate patterns, and are often limited to the region of collection. Pulling together data from multiple proxy records both within a region and globally, allows broader climate research to be conducted.
+
+There is an abundance of programming software out there for the purposes of displaying data from proxy records, primarily as graphs. There is also an abundance of mapping programs for displaying regional to global scale maps in a range of resolutions. There is even some softwards specifically for displaying climate data on world maps, in the form of overlays and interactive maps. Being able to visually display the link between the scientific collection of environmental proxies and the results from analysing that data would aid the world of climate science in conveying key concepts to the general public.
+
+My aim with this Notebook is to provide a way for scientists to easily produce a map with the proxy record collection location marked and the data displayed alongside in the form of graphs. This will be achieved by combining multiple python programming packages, such as cartopy, LAtools, Xarray, and matpltlib, and tuning them towards my goal. This Notebook is specific in the sense that it is targeted towards climate scientists for the novel use of proxy record location mapping, however, is general in the sense that multiple disiplines can utilise it for a range of applications such as journal papers, posters, and seminar presentations. 
+
 
 ## Resources & Timeline
 
-_What do you have at your disposal already that will help the project along. Did you convince somebody else to help you ? Are there already some packages you can build upon. What makes it possible to do this project in the time available. Do you intend to continue this project in the future ?_
+Inspiration for this project came from using a python package called LAtools which allows the user to create graphs from Laser Ablation data (a form of mass spectrometry). I found LAtools quite difficult as a beginner programmer and the graphs it created were confusing without the spatial and temporal knowledge that it was showing from the original proxy records. By combining the applications of LAtools with other packages, such as cartopy, the data would be able to be displayed in an easier to understand manner. Further combination of other packages will allow a more general application of this Notebook, as more data can be displayed then just Laser Ablation data. At my disposal I have coral sample Laser Ablation data and some radiocarbon data, as well as the exact locations of the corals, which I can use to test my Notebook.
 
-# maps with coral locations 
+
+**maps with coral locations **
 - maps created through cartopy
 
-# coral data processing to produce accompaning time-series graphs:
+**coral data processing to produce accompaning time-series graphs:**
 - laser ablation data (trace metal analysis) can be processed through LAtools 
 - SST data can be processed through xarray, cartopy, matplotlib
 - radiocarbon data can be processed through 
 
-## Testing, validation, documentation
+**Testing, validation, documentation**
 
 - testing is vital -  notebook may run now, but with so many components coming together something will stop working with time, so you need to figure out how that will be addressed in the future.
 - hide duplications (things users can break) - makes it harder to use but easier to read
