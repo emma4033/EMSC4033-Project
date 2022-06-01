@@ -42,10 +42,10 @@ My aim with this Notebook is to provide a way for scientists to easily produce a
 Inspiration for this project came from using a python package called LAtools which allows the user to create graphs from Laser Ablation data (a form of mass spectrometry). I found LAtools quite difficult as a beginner programmer and the graphs it created were confusing without the spatial and temporal knowledge that it was showing from the original proxy records. By combining the applications of LAtools with other packages, such as cartopy, the data would be able to be displayed in an easier to understand manner. Further combination of other packages will allow a more general application of this Notebook, as more data can be displayed then just Laser Ablation data. At my disposal I have coral sample Laser Ablation data and some radiocarbon data, as well as the exact locations of the corals, which I can use to test my Notebook.
 
 
-**maps with coral locations **
+**Maps with coral locations**
 - maps created through cartopy
 
-**coral data processing to produce accompaning time-series graphs:**
+**Coral data processing to produce accompaning time-series graphs:**
 - laser ablation data (trace metal analysis) can be processed through LAtools 
 - SST data can be processed through xarray, cartopy, matplotlib
 - radiocarbon data can be processed through 
