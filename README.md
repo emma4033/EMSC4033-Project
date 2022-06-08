@@ -11,8 +11,6 @@ To get started please ‘fork’ or copy the repository so you can test, experim
 
 •	**Ocean_maps.ipynb**: this module will generate the maps for the location of your scientific samples.
 
-•	**dependencies.py**: containing the dependencies required to run Ocean_maps.ipynb.
-
 
 Instructions on how to produce, modify and personalise the maps are contained within the docstrings above each function.
 
