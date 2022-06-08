@@ -41,6 +41,7 @@ Inspiration for this project came from using a python package called LAtools whi
 **Review of Existing Code**
 
 - LAtools
+
 LAtools is a Python toolbox developed for the processing of Laser Ablation Mass Spectrometry (LA-MS) raw data in a standard manner, removing the need for manual processing. It processes data through signal de-spiking, background identification and subtraction, standard normalisation, and calibration. LAtools goes a bit further than other Laser Ablation processing packages by implementing filters for contaminant signal removal. 
 
 Through using and testing LAtools I found the most difficult aspect of the toolbox is in uploading user data. LAtools requires the data to be in a specific format for processing. The method provided for splitting data files into the correct format was difficult to understand and ended with me manually splitting my data in excel. 
@@ -48,6 +49,7 @@ Through using and testing LAtools I found the most difficult aspect of the toolb
 I hope to use LAtools in the future as a means to easily produce graphs of laser ablation data.
 
 - Cartopy
+
 Cartopy is useful for simple mapping specific for scientific data visualisation, making it ideal for the goal of my Notebook. To better visualise scientific data in relation to the spatial aspects of data collection, two options will be available for the user; a wider region with location marker (i.e. country area) and more distinct region location marker (i.e. to highlight topography features). 
 
 **First map option**
