@@ -10,7 +10,9 @@ The purpose of this repository is to provide a Notebook tutorial for creating ma
 To get started please ‘fork’ or copy the repository so you can test, experiment, and run the Notebook with freedom to personalise the code. Within this repository you will find the following files:
 
 •	**Ocean_maps.ipynb**: this module will generate the maps for the location of your scientific samples.
-•	emma’s_project_plan: where you can read all about my inspiration, process and complications in developing this project.
+
+•	**emma’s_project_plan**: where you can read all about my inspiration, process and complications in developing this project.
+
 •	three sets of png and pdf files that are the output files of my notebook, the notebook produces these files with example variables that the user can implement through running the notebook and following the instructions.
 
 
