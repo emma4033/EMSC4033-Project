@@ -4,29 +4,18 @@
 
 ## Executive summary
 
-Allow the user to create maps focused on coastlines and ocean topography with coral sample locations specified and displayed with climate data from the coral samples. For example, the data from laser ablation analysis of coral core samples from Gladstone Harbour (past research I have done), or SST and radiocarbon analysis from coral core samples from Montebello Island (my current research).
-- overlay the data collected from coral analysis with a map of the temporal and spatial changes in the region specific to what was being analysed.
+My project is a tutorial notebook for beginner python users, specifically in the realm of marine science. The notebook produces two maps for the user; a general map centred on an ocean of choice by the user, and a focused map for a specific location (i.e. coastline or island topography). Each map allows the user to specify a latitude and location so a marker can be placed and named, intended to be used to mark the location of scientific sample location (e.g. coral cores, sediment cores, seawater capture etc.). 
 
-- visualisation: combines climate research and climate data applications, branching the gap between proxy data attribution and the scientific process.
+These maps can be used by scientists to highlight the location of their research. Often in marine climate research the data collected is proxy data that links specific samples to the broader climate systems in the regions, for instance; coral proxies can infer sea-surface temperatures through time. Conveying such research to a general audience is tricky as it requires knowledge proxies in a spatial and temporal manner. The maps produce by my Notebook aims to bridge the gap between physical climate research and the applications of climate data.
 
+The notebook runs 6 functions, 2 I have written from scratch and 4 from the Cartopy gallery that I have added to and adapted. Instructions on using the functions is contained in the docstrings above each function. An example is already contained in the Notebook, with instructions on how to run the example and where to change the variables to make personalised maps. 
 
-**Example:** _(this is based on the seismic monitoring dashboard that Louis showed). Seismic stations can be used to monitor human noise over the course of the day. Some seismometers stream data live to a server and so this processing can be done in near-real time. In this project I plan to build an online dashboard which processes the data once a day and uploads the results to github as 1) raw data, 2) an image that can be embedded in websites, 3) an updating csv table in github. I also plan to use the github "actions" engine to provide all the necessary processing power._
 
 ## Goals
 
-- how to upload user data in a readable format - preparing the data for analysis
-- how to create the graphs
-- how to create the maps - identify the location and put down markers for the coral locations
-- display this data in a visually appealing and easily digestable manner
-- with the maps - need to balance interactive and static
-- analysis of tools to use: Pandas, LAtools, Cartopy, 
-- ingenuity in the design - what helped (i.e. course resources), what was troubleshooted, what was added to others packages e.t.c
+1.	Produce a Notebook that introduces marine scientists to the world of python programming with Cartopy in a way that is useful and applicable to their research. 
+2.	Use and create functions that produce two simple maps that highlights the location of the scientific samples in relation to the oceanic region in which they were collected. 
 
-Using Panda for easier data manipulation
-- get in a form pandas can read - i.e. file shape/format
-- testing - i.e. missing data from users: make error, leave it, plot it
-
-(Write things that you can assess whether they have been accomplished. For example, a goal like “improve visualisation of ocean output” is vague... But a goal that reads “implement functionality to plot streamlines of horizontal velocities in various slices from 3D ocean output” is specific enough.)
 
 ## Background and Innovation  
 
@@ -34,28 +23,50 @@ Climate science and environmental studies rely on the analysis of data collected
 
 There is an abundance of programming software out there for the purposes of displaying data from proxy records, primarily as graphs. There is also an abundance of mapping programs for displaying regional to global scale maps in a range of resolutions. There is even some softwards specifically for displaying climate data on world maps, in the form of overlays and interactive maps. Being able to visually display the link between the scientific collection of environmental proxies and the results from analysing that data would aid the world of climate science in conveying key concepts to the general public.
 
-My aim with this Notebook is to provide a way for scientists to easily produce a map with the proxy record collection location marked and the data displayed alongside in the form of graphs. This will be achieved by combining multiple python programming packages, such as cartopy, LAtools, Xarray, and matpltlib, and tuning them towards my goal. This Notebook is specific in the sense that it is targeted towards climate scientists for the novel use of proxy record location mapping, however, is general in the sense that multiple disiplines can utilise it for a range of applications such as journal papers, posters, and seminar presentations. 
+My aim with this Notebook is to provide a way for scientists to easily produce a map with the proxy record collection location marked. This will be achieved through the use of cartopy and matplotlib, and tuning them towards my goal. This Notebook is specific in the sense that it is targeted towards climate scientists for the novel use of proxy record location mapping, however, is general in the sense that multiple disiplines can utilise it for a range of applications such as journal papers, posters, and seminar presentations. 
 
 
 ## Resources & Timeline
 
-Inspiration for this project came from using a python package called LAtools which allows the user to create graphs from Laser Ablation data (a form of mass spectrometry). I found LAtools quite difficult as a beginner programmer and the graphs it created were confusing without the spatial and temporal knowledge that it was showing from the original proxy records. By combining the applications of LAtools with other packages, such as cartopy, the data would be able to be displayed in an easier to understand manner. Further combination of other packages will allow a more general application of this Notebook, as more data can be displayed then just Laser Ablation data. At my disposal I have coral sample Laser Ablation data and some radiocarbon data, as well as the exact locations of the corals, which I can use to test my Notebook.
+Inspiration for this project came from using a python package called LAtools which allows the user to create graphs from Laser Ablation data (a form of mass spectrometry) from analysing coral samples. I found LAtools quite difficult as a beginner programmer and the graphs it created were confusing without the spatial and temporal knowledge that it was showing from the original proxy records. By combining the applications of LAtools with other packages, such as cartopy, the data would be able to be displayed in an easier to understand manner. Further combination of other packages will allow a more general application of this Notebook, as more data can be displayed then just Laser Ablation data. At my disposal I have coral sample Laser Ablation data and some radiocarbon data, as well as the exact locations of the corals, which I can use to test my Notebook. Unfortunately I was unable to add the graphing capabilities of python to my project and was only able to do the mapping side of my project. In the future I would like to add to this Notebook and allow the user to add graphs alongside their maps.
+
+**Timeline**
+
+-	tested out some resources for making maps specific to displaying climate data. This included a method of making a global map with an overlay of sea-surface temperature anomalies. 
+-	spent a few days figuring out LAtools and how to apply it in a more user friendly manner for non-programming users. Unfortunately I was unsuccessful with my limited knowledge of python and gave up on the idea of implementing LAtools in my project in the limited time I have. 
+-	trouble-shooted using pyleoclim as a resource for plotting paleogeoscientific data from LiPD data-sources. Also, xarray and pandas for graphing data, however, ran into similar issues and decided against graphs for my project with the limited time schedule.  
+-	devoted the rest of my time developing the maps and how a beginner user could learn simple cartopy map making for a specific scientific purpose.
 
 
-**Maps with coral locations**
-- maps created through cartopy
+**Review of Existing Code**
 
-**Coral data processing to produce accompaning time-series graphs:**
-- laser ablation data (trace metal analysis) can be processed through LAtools 
-- SST data can be processed through xarray, cartopy, matplotlib
-- radiocarbon data can be processed through 
+LAtools is a Python toolbox developed for the processing of Laser Ablation Mass Spectrometry (LA-MS) raw data in a standard manner, removing the need for manual processing. It processes data through signal de-spiking, background identification and subtraction, standard normalisation, and calibration. LAtools goes a bit further than other Laser Ablation processing packages by implementing filters for contaminant signal removal. 
+
+Through using and testing LAtools I found the most difficult aspect of the toolbox is in uploading user data. LAtools requires the data to be in a specific format for processing. The method provided for splitting data files into the correct format was difficult to understand and ended with me manually splitting my data in excel. 
+
+I hope to use LAtools in the future as a means to easily produce graphs of laser ablation data.
+
+
+Cartopy is useful for simple mapping specific for scientific data visualisation, making it ideal for the goal of my Notebook. To better visualise scientific data in relation to the spatial aspects of data collection, two options will be available for the user; a wider region with location marker (i.e. country area) and more distinct region location marker (i.e. to highlight topography features). 
+
+**First map option**
+I have adapted a function from the Cartopy Gallery that creates maps a simple map with the ability to specify a location marker and name based on latitude and longitude input by the user. This map requires user input for the global location, which I have simplified to a list of areas. The purpose of this map is for global visualisation, intended to broaden the impact of spatial consideration for scientific sample collection. I tested a few different versions of map creation styles from the Cartopy Gallery, including different projections, topography styles, and features
+-	used cartopy features (cartopy.feature) and tested combinations. Settled for rivers, oceans, land, borders, coastlines and states_provinces, for the final map.
+-	tested some map tiles, however, for the broader map the generic cartopy topography is a simple option that highlights the location.
+-	made a dictionary for easy creation of maps based on the 5 world oceans. This centers the focus on oceans instead of land, which is important for linking marine science to its applications.
+
+**Second Map option**
+-	a more specific map option that requires the knowledge of the latitude and longitude of map
+-	use NaturalEarth tiles for the higher resolution smaller scale maps required to highlight features such as topography and coastlines.
+
 
 **Testing, validation, documentation**
 
-- testing is vital -  notebook may run now, but with so many components coming together something will stop working with time, so you need to figure out how that will be addressed in the future.
-- hide duplications (things users can break) - makes it harder to use but easier to read
-- docstrings for how the user should upload the files
+- docstrings are contained with each function and file upload, for how the user should upload the files and use the functions.
+- there is a test in the ocean_maps.ipynb for the function I created to extract data from the dictionary of ocean latitudes and longitudes. This test tells the user which projection is being used for the main map and why projection specification is important.
+- There is another test for the location marker code called check_location_marker that ensures the user input is coordinates.
 
-**Note:** You need to think about how you will know your code is correct and achieves the goals that are set out above (specific tests that can be implemented automatically using, for example, the `assert` statement in python.)  It can be really helpful if those tests are also part of the documentation so that when you tell people how to do something with the code, the example you give is specifically targetted by some test code.
+**Limitations and further development**
 
-_Provide some specific tests with values that you can imagine `assert`ing_
+My maps are limited in there complexity, which is useful for beginner programmers, however branching off from this Notebook into more complex map making capabilities is not plausible and the Cartopy Gallery resource is recommended. Further innovation of this Notebook could be done to make it more applicable and stylish for marine scientists, such as including marking of ocean features, such as major currents and ocean circulation. 
+
